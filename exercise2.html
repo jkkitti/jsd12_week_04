@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TikTok T</title>
+    <style>
+      body {
+        margin: 0;
+        background: #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .letter {
+        font-family: "Arial Black", sans-serif;
+        font-weight: 900;
+        font-size: 200px;
+        color: #ffffff;
+        position: relative;
+        display: inline-block;
+      }
+
+      .letter::before {
+        content: attr(data-t);
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #69c9d0;
+        transform: translate(-6px, 5px);
+      }
+
+      .letter::after {
+        content: attr(data-t);
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #ee1d52;
+        transform: translate(6px, -5px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <span class="letter" data-t="T">T</span>
+    </div>
+  </body>
+</html>

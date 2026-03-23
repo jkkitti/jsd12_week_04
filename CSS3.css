@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+h1 {
+  color: red;
+  text-shadow: black 5px 2px 1px;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: Roboto Mono;
+  text-align: center;
+}
