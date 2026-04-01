@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capybara Coffee</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        background: #fff8f0;
+        color: #333;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10%;
+        background: #6b4226;
+        color: white;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+      }
+
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px 10%;
+        flex-wrap: wrap;
+      }
+
+      .hero-text {
+        max-width: 500px;
+      }
+
+      .hero-text h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+
+      .hero-text p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      .cta-btn {
+        background: #ffb703;
+        color: #333;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .cta-btn:hover {
+        background: #fb8500;
+        color: white;
+      }
+
+      .hero-img {
+        font-size: 120px;
+      }
+
+      .menu {
+        padding: 60px 10%;
+        text-align: center;
+      }
+
+      .menu h2 {
+        margin-bottom: 40px;
+        font-size: 32px;
+      }
+
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .card h3 {
+        margin-bottom: 10px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #6b4226;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          text-align: center;
+        }
+
+        .hero-text h1 {
+          font-size: 36px;
+        }
+
+        .hero-img {
+          margin-top: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">🐹 Capybara Coffee</div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>กาแฟชิลๆ กับคาปิบาร่า</h1>
+        <p>
+          สัมผัสความอบอุ่น นุ่มละมุนเหมือนคาปิบาร่า
+          กับกาแฟคุณภาพและบรรยากาศสุดคิวท์
+        </p>
+        <a href="#" class="cta-btn">Get Started</a>
+      </div>
+      <div class="hero-img">☕🐹</div>
+    </section>
+
+    <section class="menu">
+      <h2>เมนูยอดนิยม</h2>
+      <div class="menu-grid">
+        <div class="card">
+          <h3>Capy Latte</h3>
+          <p>นุ่ม หอม ละมุน</p>
+        </div>
+        <div class="card">
+          <h3>Mocha Chill</h3>
+          <p>เข้มข้น ผ่อนคลาย</p>
+        </div>
+        <div class="card">
+          <h3>Caramel Hug</h3>
+          <p>หวานละมุน อบอุ่นหัวใจ</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>© 2026 Capybara Coffee 🐹☕</footer>
+  </body>
+</html>
