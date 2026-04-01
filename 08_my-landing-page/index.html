@@ -1,176 +1,318 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="th">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Capybara Coffee</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Segoe UI", sans-serif;
-      }
-
-      body {
-        background: #fff8f0;
-        color: #333;
-      }
-
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 10%;
-        background: #6b4226;
-        color: white;
-      }
-
-      .logo {
-        font-size: 24px;
-        font-weight: bold;
-      }
-
-      nav a {
-        margin-left: 20px;
-        text-decoration: none;
-        color: white;
-        font-weight: 500;
-      }
-
-      .hero {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 60px 10%;
-        flex-wrap: wrap;
-      }
-
-      .hero-text {
-        max-width: 500px;
-      }
-
-      .hero-text h1 {
-        font-size: 48px;
-        margin-bottom: 20px;
-      }
-
-      .hero-text p {
-        margin-bottom: 20px;
-        line-height: 1.6;
-      }
-
-      .cta-btn {
-        background: #ffb703;
-        color: #333;
-        padding: 15px 25px;
-        border: none;
-        border-radius: 8px;
-        font-size: 18px;
-        cursor: pointer;
-        transition: 0.3s;
-        text-decoration: none;
-        display: inline-block;
-      }
-
-      .cta-btn:hover {
-        background: #fb8500;
-        color: white;
-      }
-
-      .hero-img {
-        font-size: 120px;
-      }
-
-      .menu {
-        padding: 60px 10%;
-        text-align: center;
-      }
-
-      .menu h2 {
-        margin-bottom: 40px;
-        font-size: 32px;
-      }
-
-      .menu-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-      }
-
-      .card {
-        background: white;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      }
-
-      .card h3 {
-        margin-bottom: 10px;
-      }
-
-      footer {
-        text-align: center;
-        padding: 20px;
-        background: #6b4226;
-        color: white;
-      }
-
-      @media (max-width: 768px) {
-        .hero {
-          text-align: center;
-        }
-
-        .hero-text h1 {
-          font-size: 36px;
-        }
-
-        .hero-img {
-          margin-top: 20px;
-        }
-      }
-    </style>
+    <title>StockFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css.css" />
   </head>
   <body>
-    <header>
-      <div class="logo">🐹 Capybara Coffee</div>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Menu</a>
-        <a href="#">Contact</a>
-      </nav>
-    </header>
+    <div class="page-shell">
+      <div class="bg-gradient"></div>
+      <div class="bg-grid"></div>
+      <div class="bg-orb bg-orb-right"></div>
+      <div class="bg-orb bg-orb-left"></div>
 
-    <section class="hero">
-      <div class="hero-text">
-        <h1>กาแฟชิลๆ กับคาปิบาร่า</h1>
-        <p>
-          สัมผัสความอบอุ่น นุ่มละมุนเหมือนคาปิบาร่า
-          กับกาแฟคุณภาพและบรรยากาศสุดคิวท์
-        </p>
-        <a href="#" class="cta-btn">Get Started</a>
-      </div>
-      <div class="hero-img">☕🐹</div>
-    </section>
+      <header class="site-header container">
+        <div class="brand">
+          <div class="brand-mark">S</div>
+          <div>
+            <p class="brand-name">StockFlow</p>
+            <p class="brand-tagline">ระบบจัดการสต็อกที่คล่องตัวสำหรับทุกทีม</p>
+          </div>
+        </div>
 
-    <section class="menu">
-      <h2>เมนูยอดนิยม</h2>
-      <div class="menu-grid">
-        <div class="card">
-          <h3>Capy Latte</h3>
-          <p>นุ่ม หอม ละมุน</p>
-        </div>
-        <div class="card">
-          <h3>Mocha Chill</h3>
-          <p>เข้มข้น ผ่อนคลาย</p>
-        </div>
-        <div class="card">
-          <h3>Caramel Hug</h3>
-          <p>หวานละมุน อบอุ่นหัวใจ</p>
-        </div>
-      </div>
-    </section>
+        <nav class="main-nav">
+          <a href="#features">จุดเด่น</a>
+          <a href="#workflow">การทำงาน</a>
+          <a href="#pricing">แพ็กเกจ</a>
+          <a class="nav-button" href="#contact">Demo</a>
+        </nav>
+      </header>
 
-    <footer>© 2026 Capybara Coffee 🐹☕</footer>
+      <main>
+        <section class="hero container">
+          <div class="hero-copy">
+            <span class="eyebrow"
+              >มองเห็นสต็อกแบบเรียลไทม์ พร้อมใช้ได้ทั้งทีม</span
+            >
+            <h1>
+              จัดการสต็อกได้แม่นยำขึ้น
+              <span>ของไม่ขาด ชั้นวางไม่ล้น ทีมทำงานไม่สะดุด</span>
+            </h1>
+            <p class="hero-text">
+              ระบบ Inventory Management สำหรับร้านค้า คลังสินค้า และทีมจัดซื้อ
+              ที่ช่วยให้คุณเช็กจำนวนคงเหลือได้ทันที
+              รับรู้ความเคลื่อนไหวของสินค้าแบบสด
+              และตัดสินใจสั่งซื้อได้จากข้อมูลจริงในหน้าจอเดียว
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact"
+                >เริ่มทดลองใช้ฟรี</a
+              >
+              <a class="button button-secondary" href="#features"
+                >ดูฟีเจอร์ทั้งหมด</a
+              >
+            </div>
+
+            <div class="stats-grid">
+              <article class="stat-card">
+                <p class="stat-number">99.9%</p>
+                <p class="stat-label">ความแม่นยำของข้อมูลสต็อกทุกช่องทาง</p>
+              </article>
+              <article class="stat-card">
+                <p class="stat-number">42%</p>
+                <p class="stat-label">งานรับเข้าและหยิบสินค้าทำได้เร็วขึ้น</p>
+              </article>
+              <article class="stat-card">
+                <p class="stat-number">24/7</p>
+                <p class="stat-label">ดูสถานะสต็อกได้ตลอดเวลาทุกสาขา</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="dashboard-frame">
+              <div class="dashboard-panel">
+                <div class="panel-header">
+                  <div>
+                    <p class="panel-label">ภาพรวมการดำเนินงาน</p>
+                    <h2>Warehouse Pulse</h2>
+                  </div>
+                  <div class="live-badge">ซิงก์สด</div>
+                </div>
+
+                <div class="summary-grid">
+                  <article class="summary-card summary-card-dark">
+                    <p class="panel-label">สินค้าพร้อมขาย</p>
+                    <p class="summary-number">18,420</p>
+                    <p class="summary-note is-positive">
+                      เพิ่มขึ้น 12.8% จากสัปดาห์ก่อน
+                    </p>
+                  </article>
+                  <article class="summary-card summary-card-alert">
+                    <p class="panel-label alert-text">แจ้งเตือนสินค้าใกล้หมด</p>
+                    <p class="summary-number">27</p>
+                    <p class="summary-note alert-text">
+                      มีคำแนะนำการสั่งซื้อพร้อมใช้งาน
+                    </p>
+                  </article>
+                </div>
+
+                <div class="category-card">
+                  <div class="panel-header">
+                    <div>
+                      <p class="category-label">หมวดสินค้าที่หมุนเร็วที่สุด</p>
+                      <p class="category-title">ประจำเดือนนี้</p>
+                    </div>
+                    <span class="mini-badge">อัปเดตล่าสุด 2 นาทีที่แล้ว</span>
+                  </div>
+
+                  <div class="progress-list">
+                    <div class="progress-item">
+                      <div class="progress-meta">
+                        <span>อุปกรณ์อิเล็กทรอนิกส์</span>
+                        <span>78%</span>
+                      </div>
+                      <div class="progress-track">
+                        <div class="progress-fill fill-78"></div>
+                      </div>
+                    </div>
+                    <div class="progress-item">
+                      <div class="progress-meta">
+                        <span>ของใช้ในบ้าน</span>
+                        <span>65%</span>
+                      </div>
+                      <div class="progress-track">
+                        <div class="progress-fill fill-65 fill-amber"></div>
+                      </div>
+                    </div>
+                    <div class="progress-item">
+                      <div class="progress-meta">
+                        <span>สุขภาพและความงาม</span>
+                        <span>49%</span>
+                      </div>
+                      <div class="progress-track">
+                        <div class="progress-fill fill-49 fill-green"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-card">
+              <p class="floating-label">เติมสต็อกอัตโนมัติ</p>
+              <p class="floating-title">วันนี้มี 12 รายการที่ควรสั่งเพิ่ม</p>
+              <p class="floating-text">
+                ลดความเสี่ยงของขาดก่อนถึงช่วงขายพีคของวัน
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" class="section container">
+          <div class="section-head">
+            <p class="section-kicker">ฟีเจอร์หลัก</p>
+            <h2>ทุกทีมเห็นข้อมูลตรงกัน ทำงานไวขึ้น และวางแผนได้มั่นใจขึ้น</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon icon-amber">01</div>
+              <h3>อัปเดตสต็อกแบบเรียลไทม์</h3>
+              <p>
+                ทุกการรับเข้า โอนย้าย ขาย และคืนสินค้า
+                ถูกบันทึกและอัปเดตจำนวนคงเหลือทันที
+              </p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon icon-sky">02</div>
+              <h3>ระบบแจ้งเตือนอัจฉริยะ</h3>
+              <p>
+                แจ้งเตือนสินค้าใกล้หมด สินค้าค้างสต็อก
+                และความผิดปกติที่ควรรีบตรวจสอบแบบอัตโนมัติ
+              </p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon icon-green">03</div>
+              <h3>ดูแลหลายคลังหลายสาขา</h3>
+              <p>
+                ควบคุมสต็อกหลายคลังหรือหลายสาขาได้จากหน้าจอเดียว
+                พร้อมตรวจสอบประวัติย้อนหลังได้ครบ
+              </p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon icon-rose">04</div>
+              <h3>รายงานพร้อมใช้งาน</h3>
+              <p>
+                สรุปสินค้าขายดี สินค้าหมุนช้า
+                และต้นทุนคงคลังในรูปแบบที่หยิบไปวางแผนต่อได้ทันที
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="workflow" class="section section-dark">
+          <div class="container workflow-grid">
+            <div class="section-head dark-head">
+              <p class="section-kicker gold-text">ขั้นตอนการทำงาน</p>
+              <h2>
+                ตั้งแต่รับสินค้าเข้าคลัง ไปจนถึงวิเคราะห์ยอดขายใน flow เดียว
+              </h2>
+              <p class="section-description">
+                ออกแบบมาให้ทีมคลัง ทีมขาย และผู้บริหารใช้ข้อมูลชุดเดียวกัน
+                ลดการสลับระบบและลดเวลาตามหาตัวเลขล่าสุด
+              </p>
+            </div>
+
+            <div class="workflow-list">
+              <article class="workflow-card">
+                <p class="workflow-step">ขั้นตอนที่ 1</p>
+                <h3>รับเข้าและตรวจสอบ</h3>
+                <p>
+                  บันทึกรับสินค้า สแกนบาร์โค้ด
+                  และยืนยันความถูกต้องก่อนนำเข้าคลัง
+                </p>
+              </article>
+              <article class="workflow-card">
+                <p class="workflow-step">ขั้นตอนที่ 2</p>
+                <h3>ซิงก์ข้อมูลทุกช่องทาง</h3>
+                <p>
+                  อัปเดตจำนวนคงเหลือให้หน้าร้าน คลัง
+                  และทีมขายเห็นตรงกันแบบเรียลไทม์
+                </p>
+              </article>
+              <article class="workflow-card">
+                <p class="workflow-step">ขั้นตอนที่ 3</p>
+                <h3>คาดการณ์และสั่งซื้อ</h3>
+                <p>
+                  ใช้ข้อมูลย้อนหลังช่วยคาดการณ์ความต้องการและสร้างคำแนะนำการสั่งซื้อรอบถัดไป
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="pricing" class="section container">
+          <div class="pricing-grid">
+            <article class="benefit-card">
+              <p class="section-kicker">เหตุผลที่หลายทีมเลือกใช้</p>
+              <h2>
+                เปลี่ยนจากไฟล์กระจัดกระจาย มาเป็นระบบที่พร้อมรองรับการเติบโต
+              </h2>
+              <ul class="benefit-list">
+                <li>
+                  ลดความผิดพลาดจากการกรอกข้อมูลซ้ำ
+                  และปัญหาสต็อกไม่ตรงกันระหว่างทีม
+                </li>
+                <li>
+                  ช่วยให้ทีมจัดซื้อวางแผนได้จากตัวเลขจริง
+                  ไม่ต้องคาดเดาจากความรู้สึก
+                </li>
+                <li>
+                  รองรับการเพิ่มสาขา เพิ่ม SKU
+                  และขยายทีมได้โดยไม่เพิ่มความวุ่นวาย
+                </li>
+              </ul>
+            </article>
+
+            <article class="plan-card">
+              <p class="section-kicker gold-text">แพ็กเกจเริ่มต้น</p>
+              <div class="price-row">
+                <span class="price">299 บาท</span>
+                <span class="price-unit">/ เดือน</span>
+              </div>
+              <p class="plan-text">
+                เหมาะสำหรับธุรกิจที่อยากเริ่มจัดการสต็อกอย่างเป็นระบบ
+                พร้อมแดชบอร์ดใช้งานง่ายและการแจ้งเตือนอัตโนมัติ
+              </p>
+
+              <div class="plan-grid">
+                <div class="plan-item">เพิ่มสินค้าได้ไม่จำกัด</div>
+                <div class="plan-item">ผู้ใช้งานคลัง 3 คน</div>
+                <div class="plan-item">แจ้งเตือนสต็อก</div>
+                <div class="plan-item">รายงานรายสัปดาห์</div>
+              </div>
+
+              <a class="button button-gold" href="#contact">ขอรับเดโม</a>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" class="contact-section container">
+          <div class="contact-card">
+            <div>
+              <p class="section-kicker light-kicker">พร้อมเริ่มใช้งาน</p>
+              <h2>พร้อมยกระดับการจัดการสต็อกให้เร็วขึ้น ชัดขึ้น และโตต่อได้</h2>
+              <p class="contact-text">
+                ใช้งานได้ทั้งบนเดสก์ท็อปและมือถือ
+                เหมาะกับทีมที่ต้องการเห็นภาพรวมสต็อกแบบเรียลไทม์
+              </p>
+            </div>
+
+            <div class="contact-actions">
+              <a
+                class="button contact-button-primary"
+                href="mailto:j.kittiwirita@gmail.com"
+                >j.kittiwirita@gmail.com</a
+              >
+              <a
+                class="button contact-button-secondary"
+                href="tel:+660956715678"
+                >095 671 5678</a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
