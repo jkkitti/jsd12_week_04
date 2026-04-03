@@ -68,7 +68,11 @@ h3 {
   top: 0;
   height: 34rem;
   opacity: 0.5;
-  background-image: radial-gradient(circle at 1px 1px, rgba(20, 33, 61, 0.08) 1px, transparent 0);
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(20, 33, 61, 0.08) 1px,
+    transparent 0
+  );
   background-size: 22px 22px;
 }
 
@@ -136,7 +140,9 @@ h3 {
 }
 
 .main-nav a {
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .main-nav a:hover {
@@ -471,9 +477,9 @@ h3 {
 }
 
 .section-kicker {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ember);
 }
